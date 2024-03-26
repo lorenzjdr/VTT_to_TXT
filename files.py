@@ -16,12 +16,21 @@ class Filing:
     @staticmethod
     def output(filename):
         with open(f"{filename}.txt", 'w') as output_file:
+            stack = []
             for line in Filing.dialogue:
-                output_file.write(line + '\n')
-
+                while line:
+                    idx = line.find('.')
+                    if idx == -1:
+                        stack.append(line)
+                        break
+                    else:
+                        stack.append(line[:idx + 1])
+                        output_file.write(' '.join(stack) + '\n')
+                        stack = []
+                        line = line[idx + 1:].lstrip()
+    
     @staticmethod 
     def create_file_path(filename):
         cwd = os.getcwd()  
         file_path = os.path.join(cwd, filename)
         return file_path
-
