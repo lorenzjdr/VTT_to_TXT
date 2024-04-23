@@ -1,5 +1,5 @@
-#WHY ?
+# WHY ?
 VTT contains timestamps that I dont need.
 
-#Description
+# Description
 CLI progam that extracts user dialogue from a given vtt file.  
