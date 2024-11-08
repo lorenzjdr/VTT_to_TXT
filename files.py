@@ -15,7 +15,7 @@ class Filing:
 
     @staticmethod
     def output(filename):
-        with open(f"{filename}.txt", 'w') as output_file:
+        with open(f"{filename}", 'w') as output_file:
             stack = []
             for line in Filing.dialogue:
                 while line:
