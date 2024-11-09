@@ -22,19 +22,11 @@ def index():
             output_path = os.path.join('outputs', f"{sanitized_filename}.txt")
             Filing.output(output_path)
             if os.path.exists(output_path):
-                return jsonify({'download_url': f"/download/{sanitized_filename}.txt"})
+                return send_file(output_path, as_attachment=True)
             else:
                 return jsonify({'error': 'File not found'}), 404
     
     return render_template('index.html')
-
-@app.route('/download/<filename>', methods=['GET'])
-def download(filename):
-    output_path = os.path.join('outputs', filename)
-    if os.path.exists(output_path):
-        return send_file(output_path, as_attachment=True)
-    else:
-        return "File not found", 404
 
 if __name__ == '__main__':
     if not os.path.exists('uploads'):
