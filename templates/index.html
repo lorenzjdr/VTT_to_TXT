@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>VTT to TXT Converter</title>
 </head>
-<body>
+<body class="bg-black flex items-center justify-center min-h-screen">
     <h1>VTT to TXT Converter</h1>
+
     <form action="/" method="post" enctype="multipart/form-data">
+        
         <label for="vtt_file">VTT File:</label>
         <input type="file" id="vtt_file" name="vtt_file" required><br><br>
         <label for="output_filename">Output Filename:</label>
         <input type="text" id="output_filename" name="output_filename" required><br><br>
-        <button type="submit">Convert</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Convert</button>
     </form>
 </body>
 </html>
