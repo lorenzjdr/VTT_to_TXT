@@ -9,13 +9,21 @@
 <body class="bg-black flex flex-col items-center justify-center min-h-screen text-white gap-10">
     <h1 class="text-6xl">VTT to TXT Converter</h1>
 
-    <form action="/" method="post" enctype="multipart/form-data" class="flex flex-col gap-4">
-        <label for="vtt_file">VTT File:</label>
-        <input type="file" id="vtt_file" name="vtt_file" required><br><br>
-        <label for="output_filename">Output Filename:</label>
+    <form action="/" method="post" enctype="multipart/form-data" class="flex flex-col gap-2">
+        <label for="vtt_file" class="text-2xl">VTT File:</label>
+        <input type="file"
+          id="vtt_file"
+          name="vtt_file"
+          class="block w-full text-lg text-slate-500
+              file:mr-4 file:py-4 file:px-6 file:rounded
+              file:border-0 file:text-lg file:font-semibold
+              file:bg-pink-50 file:text-pink-700
+              hover:file:bg-pink-200"
+        />
+        <label for="output_filename" class="text-2xl">Enter filename:</label>
         <input type="text" id="output_filename" name="output_filename"
         placeholder="Output Filename" class="text-black text-lg py-2 px-4 rounded" required><br><br>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Convert</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded" type="submit">Convert</button>
     </form>
 </body>
 </html>
