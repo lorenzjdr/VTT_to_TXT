@@ -7,13 +7,14 @@
     <title>VTT to TXT Converter</title>
 </head>
 <body class="bg-black flex flex-col items-center justify-center min-h-screen text-white gap-10">
-    <h1>VTT to TXT Converter</h1>
+    <h1 class="text-6xl">VTT to TXT Converter</h1>
 
-    <form action="/" method="post" enctype="multipart/form-data">
+    <form action="/" method="post" enctype="multipart/form-data" class="flex flex-col gap-4">
         <label for="vtt_file">VTT File:</label>
         <input type="file" id="vtt_file" name="vtt_file" required><br><br>
         <label for="output_filename">Output Filename:</label>
-        <input type="text" id="output_filename" name="output_filename" required><br><br>
+        <input type="text" id="output_filename" name="output_filename"
+        placeholder="Output Filename" class="text-black text-lg py-2 px-4 rounded" required><br><br>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Convert</button>
     </form>
 </body>
