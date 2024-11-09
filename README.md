@@ -1,6 +1,8 @@
 # WHY ?
 VTT contains timestamps that I don't need. I built this so I can save some time for a class. 
 
+# WIP - GUI for the user to just simply upload the VTT file
+
 # Description
 CLI progam that extracts user dialogue from a given vtt file.  
 
