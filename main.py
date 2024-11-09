@@ -14,6 +14,9 @@ def index():
         vtt_file = request.files['vtt_file']
         output_filename = request.form['output_filename']
         
+        if not vtt_file.filename.endswith('.vtt'):
+            return render_template('index.html', error='Invalid file type. Please upload a .vtt file.')
+
         if vtt_file and output_filename:
             vtt_path = os.path.join('uploads', vtt_file.filename)
             vtt_file.save(vtt_path)
@@ -24,7 +27,7 @@ def index():
             if os.path.exists(output_path):
                 return send_file(output_path, as_attachment=True)
             else:
-                return jsonify({'error': 'File not found'}), 404
+                return render_template('index.html', error='File not found')
     
     return render_template('index.html')
 
