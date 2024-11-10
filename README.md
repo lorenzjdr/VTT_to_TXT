@@ -1,7 +1,8 @@
 # WHY ?
 VTT contains timestamps that I don't need. I built this so I can save some time for a class. 
 
-# WIP - GUI for the user to just simply upload the VTT file
+# [Try it here](https://vtt-to-txt.lorenzjdr.dev/)  
+An online version of the converter https://vtt-to-txt.lorenzjdr.dev/
 
 # Description
 CLI progam that extracts user dialogue from a given vtt file.  
